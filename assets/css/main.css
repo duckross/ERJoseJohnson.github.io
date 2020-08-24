@@ -3394,6 +3394,8 @@ input, select, textarea {
 					outline: 0;
 					text-decoration: none;
 					text-transform: uppercase;
+					position: relative;
+					z-index: 10003;
 				}
 
 					@media screen and (max-width: 736px) {
@@ -3513,7 +3515,7 @@ input, select, textarea {
 						font-size: 0.8em;
 						letter-spacing: 0.225em;
 						padding: 0 1.5em;
-						text-transform: uppercase;
+						text-transform: uppercase;				
 					}
 
 						#header nav > ul > li > a.menuToggle {
