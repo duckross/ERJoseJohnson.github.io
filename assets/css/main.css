@@ -2671,6 +2671,16 @@ input, select, textarea {
 		display: flex;
 	}
 
+		.spotlight .image-alt {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 40%;
+			padding: 2em 4em 0.1em 4em ;
+		}
+
 		.spotlight .image {
 			-moz-order: 1;
 			-webkit-order: 1;
@@ -2686,6 +2696,16 @@ input, select, textarea {
 			}
 
 		.spotlight .content {
+			padding: 2em 4em 0.1em 4em ;
+			-moz-order: 2;
+			-webkit-order: 2;
+			-ms-order: 2;
+			order: 2;
+			max-width: 48em;
+			width: 60%;
+		}
+
+		.spotlight .content-alt {
 			padding: 2em 4em 0.1em 4em ;
 			-moz-order: 2;
 			-webkit-order: 2;
@@ -2768,8 +2788,20 @@ input, select, textarea {
 					width: 100%;
 				}
 
+				.spotlight .image-alt{
+					padding: 4em 3em 0.5em 3em ;
+					width: 100%;
+				}
+
 				.spotlight .content {
 					padding: 4em 3em 2em 3em ;
+					max-width: none;
+					text-align: center;
+					width: 100%;
+				}
+
+				.spotlight .content-alt {
+					padding: 0.5em 3em 2em 3em ;
 					max-width: none;
 					text-align: center;
 					width: 100%;
@@ -2780,7 +2812,16 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight .content {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 0em 2em ;
+			}
+
+			.spotlight .content-alt {
+				padding: 0.5em 2em 0em 2em ;
+			}
+
+			.spotlight .image-alt{
+				padding: 3em 2em 0em 2em ;
+				width: 100%;
 			}
 
 		}
