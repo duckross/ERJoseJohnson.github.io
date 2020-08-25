@@ -2695,8 +2695,8 @@ input, select, textarea {
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
-			width: 40%;
-			padding: 2em 4em 0.1em 4em ;
+			width: 60%;
+			padding: 2em 4em 2em 4em ;
 		}
 
 		.spotlight .image {
@@ -2724,13 +2724,13 @@ input, select, textarea {
 		}
 
 		.spotlight .content-alt {
-			padding: 2em 4em 0.1em 4em ;
+			padding: 2em 4em 2em 4em ;
 			-moz-order: 2;
 			-webkit-order: 2;
 			-ms-order: 2;
 			order: 2;
 			max-width: 48em;
-			width: 60%;
+			width: 40%;
 		}
 
 		.spotlight:nth-child(2n) {
@@ -2790,6 +2790,14 @@ input, select, textarea {
 				width: 55%;
 			}
 
+			.spotlight .image-alt {
+				width: 50%;
+			}
+
+			.spotlight .content-alt {
+				width: 50%;
+			}			
+
 		}
 
 		@media screen and (max-width: 980px) {
@@ -2799,7 +2807,7 @@ input, select, textarea {
 			}
 
 				.spotlight br {
-					display: none;
+					display: block;
 				}
 
 				.spotlight .image {
@@ -2811,6 +2819,10 @@ input, select, textarea {
 					width: 100%;
 				}
 
+				.spotlight .image-alt br {
+					display: block;
+				}
+
 				.spotlight .content {
 					padding: 4em 3em 2em 3em ;
 					max-width: none;
@@ -2819,7 +2831,7 @@ input, select, textarea {
 				}
 
 				.spotlight .content-alt {
-					padding: 0.5em 3em 2em 3em ;
+					padding: 0.5em 1em 1em 1em ;
 					max-width: none;
 					text-align: center;
 					width: 100%;
@@ -2834,7 +2846,7 @@ input, select, textarea {
 			}
 
 			.spotlight .content-alt {
-				padding: 0.5em 2em 0em 2em ;
+				padding: 0.5em 1em 0.5em 1em ;
 			}
 
 			.spotlight .image-alt{
@@ -4075,8 +4087,19 @@ input, select, textarea {
   margin-right: auto;
 }
 
+.slideshow-container-small {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 980px) {
 	.slideshow-container {
+	  width: 100%;
+	}
+
+	.slideshow-container-small {
 	  width: 100%;
 	}
 
@@ -4117,11 +4140,13 @@ input, select, textarea {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .prev {
   left: 0;
   border-radius: 3px 0 0 3px;	
+  background-color: rgba(0,0,0,0.1);
 }
 
 /* On hover, add a black background color with a little bit see-through */
