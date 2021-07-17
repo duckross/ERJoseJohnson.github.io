@@ -81,26 +81,26 @@
 					<!-- Full-width images with number and caption text -->
 					<div class="mySlides1 fade">
 					  <div class="numbertext">1 / 9</div>
-					  <img src="images" style="width:100%">
-   				    	<div class="All about safety">Caption Text</div>
+					  <img src="images/Covid Pics/new 1.jpeg" style="width:100%">
+   				    	<div class="Text">All about safety</div>
    					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">2 / 9</div>
 					  <img src="images/Covid Pics/new 2.jpeg" style="width:100%">
-						<div class="More safety">Caption Text</div>
+						<div class="Text">More safety</div>
 					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">3 / 9</div>
 					  <img src="images/Covid Pics/new 3.jpg" style="width:100%">
-					  	<div class="No safety is more safe than studying the words of Christ together">Caption Text</div>
+					  	<div class="Text">No safety is more safe than studying the words of Christ together</div>
 					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">4 / 9</div>
 					  <img src="images/Covid Pics/new 4.jpg" style="width:100%">
-					  	<div class="More safety in the words of Christ">Caption Text</div>
+					  	<div class="Text">More safety in the words of Christ</div>
 					</div>
   
 					<div class="mySlides1 fade">
@@ -112,25 +112,25 @@
 					<div class="mySlides1 fade">
 					  <div class="numbertext">6 / 9</div>
 					  <img src="images/Covid Pics/new 6.JPG" style="width:100%">
-					  	<div class="We sing.">Caption Text</div>
+					  	<div class="Text">We sing.</div>
 					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">7 / 9</div>
 					  <img src="images/Covid Pics/new 7.JPG" style="width:100%">
-					  	<div class="We share.">Caption Text</div>
+					  	<div class="Text">We share.</div>
 					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">8 / 9</div>
 					  <img src="images/Covid Pics/new 8.JPG" style="width:100%">
-					  	<div class="We discuss.">Caption Text</div>
+					  	<div class="Text">We discuss.</div>
 					</div>
   
 					<div class="mySlides1 fade">
 					  <div class="numbertext">9 / 9</div>
 					  <img src="images/Covid Pics/new 9.JPG" style="width:100%">
-					  	<div class="And we listen and pray.">Caption Text</div>
+					  	<div class="Text">And we listen and pray.</div>
 					</div>
   
 					<!-- Next and previous buttons -->
@@ -335,7 +335,38 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
 
+		var slideIndex = 1;
+		showSlides(1,slideIndex);
+
+		// Next/previous controls
+		function plusSlides(idx,n) {
+		  showSlides(idx, slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(idx,n) {
+		  showSlides(idx, slideIndex = n);
+		}
+
+		function showSlides(idx,n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides"+idx);
+		  var dots = document.getElementsByClassName("dot"+idx);
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+
+	</script>
 </body>
 
 </html>
