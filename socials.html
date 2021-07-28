@@ -390,35 +390,36 @@
 	<script src="assets/js/main.js"></script>
 	<script>
 
-		var slideIndex = 1;
-		showSlides(1,slideIndex);
-		showSlides(2,slideIndex);
-		showSlides(3,slideIndex);
+		var slideIndex1 = 1, slideIndex2 = 1, slideIndex3 = 1;
+		var slideIndices = [slideIndex1, slideIndex2, slideIndex3];
+		showSlides(1,slideIndex1);
+		showSlides(2,slideIndex2);
+		showSlides(3,slideIndex3);
 
 		// Next/previous controls
 		function plusSlides(idx,n) {
-		  showSlides(idx, slideIndex += n);
+		  showSlides(idx, slideIndices[idx-1] += n);
 		}
 
 		// Thumbnail image controls
 		function currentSlide(idx,n) {
-		  showSlides(idx, slideIndex = n);
+		  showSlides(idx, slideIndices[idx-1] = n);
 		}
 
 		function showSlides(idx,n) {
 		  var i;
 		  var slides = document.getElementsByClassName("mySlides"+idx);
 		  var dots = document.getElementsByClassName("dot"+idx);
-		  if (n > slides.length) {slideIndex = 1}
-		  if (n < 1) {slideIndex = slides.length}
+		  if (n > slides.length) {slideIndices[idx-1] = 1}
+		  if (n < 1) {slideIndices[idx-1] = slides.length}
 		  for (i = 0; i < slides.length; i++) {
 		      slides[i].style.display = "none";
 		  }
 		  for (i = 0; i < dots.length; i++) {
 		      dots[i].className = dots[i].className.replace(" active", "");
 		  }
-		  slides[slideIndex-1].style.display = "block";
-		  dots[slideIndex-1].className += " active";
+		  slides[slideIndices[idx-1]-1].style.display = "block";
+		  dots[slideIndices[idx-1]-1].className += " active";
 		}
 
 	</script>
